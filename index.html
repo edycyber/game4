@@ -308,7 +308,7 @@
     <div id="fps-counter">FPS: --</div>
     
     <div id="game-over">
-        <h1 id="game-over-title">Camp Overrun</h1>
+        <h1 id="game-over-title">Game Over</h1>
         <h2 id="game-over-subtitle"></h2>
         <button id="restart-button">Restart Defense</button>
     </div>
@@ -342,7 +342,7 @@
         let currentWeapon = 0;
         let backgroundMusic;
         let musicStarted = false;
-        const totalEnemiesToSpawn = 10;
+        const totalEnemiesToSpawn = 15;
 
         const weapons = [
             { name: "Assault Rifle", maxAmmo: 30, fireRate: 0.1, damage: 10, auto: true, bulletSpeed: 2 },
@@ -648,7 +648,7 @@
             setupElements() {
                 this.element.className = 'enemy';
                 this.element.style.backgroundImage = this.type === 'grunt' ? 
-                    'url(soldier.png)' : 'url(soldier.png)';
+                    'url(soldier.png)' : 'url(tank.png)';
                 document.getElementById('enemy-container').appendChild(this.element);
                 
                 this.minimapElement.className = 'minimap-enemy';
